@@ -18,5 +18,6 @@ def is_armstrong(num):
 
 
 print(is_armstrong(407))
+print(is_armstrong(410))
 
 
