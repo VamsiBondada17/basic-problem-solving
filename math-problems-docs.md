@@ -4,7 +4,7 @@
 A number is considered abundant if the sum of its proper divisors is greater than the number itself.
 
 ```python
-def factors_sum(num):
+    def factors_sum(num):
     summ = 0
     for i in range(1, num):
         if num % i == 0:
@@ -92,16 +92,16 @@ def finding_factorial(num):
 Generates Fibonacci sequence up to n terms.
 
 ```python
-def fibonacci(n):
-    if n <= 0:
-        return []
-    elif n == 1:
-        return [0]
-    
-    fib = [0, 1]
-    while len(fib) < n:
-        fib.append(fib[-1] + fib[-2])
-    return fib
+def fibonacci(num):
+    n1, n2 = 0, 1
+    print("Fibonacci Series: ", n1, n2, end=" ")
+    for i in range(2, num):
+        n3 = n1 + n2
+        n1 = n2
+        n2 = n3
+        print(n3, end=" ")
+
+    print()
 ```
 
 ## GCD (Greatest Common Divisor)
