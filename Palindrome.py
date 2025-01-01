@@ -16,4 +16,5 @@ def is_palindrome(num):
         return False
 
 
-print(is_palindrome(555555))
+print(is_palindrome(555))
+
