@@ -15,3 +15,6 @@ def is_palindrome(num):
     else:
         return False
 
+
+print(is_palindrome(555))
+
