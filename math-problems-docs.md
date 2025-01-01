@@ -1,4 +1,4 @@
-# Mathematical Problems Documentation
+# Basic Math Problems Documentation
 
 ## Abundant Number
 A number is considered abundant if the sum of its proper divisors is greater than the number itself.
