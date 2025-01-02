@@ -1,10 +1,39 @@
 # Basic Math Problems Documentation
 
+## Adam Number
+A number is called an Adam number if the square of the number is a permutation of the number itself.
+```python
+def reversed_num(num):
+    rev = 0
+    while num != 0:
+        rem = num % 10
+        rev = (rev * 10) + rem
+        num = num // 10
+
+    return rev
+
+def squared_num(num):
+    return num**2
+
+def main():
+    num = int(input("Enter the Number: "))
+    original_num = num
+    rev_num = reversed_num(num)
+    sq_num1 = squared_num(num)
+    sq_num2 = squared_num(rev_num)
+    sq_rev_num = reversed_num(sq_num2)
+
+
+    if sq_num1 == sq_rev_num:
+        return ("Adam")
+    else:
+        return ("Not")
+```
 ## Abundant Number
 A number is considered abundant if the sum of its proper divisors is greater than the number itself.
 
 ```python
-    def factors_sum(num):
+def factors_sum(num):
     summ = 0
     for i in range(1, num):
         if num % i == 0:
@@ -229,6 +258,19 @@ def is_perfect_square(num):
         return False
 ```
 
+## Power of Two
+Checking the given input is Power of Two or not.
+
+```python
+def is_power_of_2(num):
+    while num > 1:
+        if num % 2 == 0:
+            num = num / 2
+        else:
+            return False
+    return num == 1
+```
+
 ## Prime Factors
 Finds all prime factors of a number.
 
@@ -318,3 +360,26 @@ def sum_of_n_nums(num):
         summ += i
     return summ
 ```
+
+## Twin Primes
+Twin primes are pairs of prime numbers that differ by 2. For example, (3, 5), (5, 7), and (11, 13) are twin prime pairs.
+
+```python
+import math
+
+
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(math.sqrt(num))+1):
+        if num % i == 0:
+            return False
+
+    return True
+
+
+for i in range(3, 100):
+    if is_prime(i-2) and is_prime(i):
+        print(i-2, i)
+```
+
