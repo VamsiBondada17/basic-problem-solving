@@ -94,6 +94,29 @@ def is_automorphic_number(num):
         return f'Its not an Automorphic number'
 ```
 
+## Deficient Number 
+
+The given number which is lesser than perfect number 
+
+```python
+def deficient_num(num):
+    summ = 0
+    for i in range(1, num):
+        if num % i == 0:
+            summ += i
+    return summ
+
+
+def main(num):
+    if num > deficient_num(num):
+        return True
+    else:
+        return False
+
+
+```
+
+
 ## Factor of a Number
 Finds all factors of a given number.
 
@@ -171,6 +194,13 @@ def hcf(a, b):
     while b:
         a, b = b, a % b
     return a
+```
+
+## Hello World
+Printing Hello World Statement
+
+```python
+print("Hello World")
 ```
 
 ## LCM (Least Common Multiple)
